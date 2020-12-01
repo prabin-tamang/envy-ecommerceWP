@@ -114,8 +114,8 @@
                 </div>
             </div>
             <div class="mySlides fade">
-               <?php $image = get_field('background_image_2'); ?>
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'];  ?> ">
+              <?php $image = get_field('hero_carousel_2');  ?> 
+                 <img src="<?php echo $image['background_image_2']['url']; ?>" alt="<?php echo $image['background_image_2']['alt'];  ?> ">
                 <div class="slideshow-container__content">
                     <h3><?php the_field('sub_heading_2')?></h3>
                     <h2><?php the_field('heading_2')?></h2>

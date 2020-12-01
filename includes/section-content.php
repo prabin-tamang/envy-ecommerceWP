@@ -1,21 +1,25 @@
  <main>
         <div class="container">
+            <!-- promo section -->
             <section class="promo-card">
                 <div class="promo-card__content">
-                    <a href="#">
-                        <img src="/wp-content/themes/envy-copenhagen/assets/img/travel_collection_2100x.png" alt="travel collection">
+                    <a href="<?php the_field('promo_link'); ?>">
+                        <?php $image = get_field('promo_background'); ?>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'];  ?> ">
                     </a>
-                    <h3 class="promo-card__heading">Travel</h3>
-                    <p class="promo-card__body">Take it on the road with our handy travel sizes.</p>
+                    <h3 class="promo-card__heading"><?php the_field('promo_heading'); ?></h3>
+                    <p class="promo-card__body"><?php the_field('promo_text'); ?></p>
                 </div>
                 <div class="promo-card__content">
-                    <a href="#">
-                        <img src="/wp-content/themes/envy-copenhagen/assets/img/love_collection_2100x.png" alt="love collection">
+                    <?php $promo = get_field('promo_2'); ?>
+                    <a href="<?php echo $promo['promo_link_2']; ?>">
+                 <img src="<?php echo $promo['promo_background_2']['url']; ?>" alt="<?php echo $promo['promo_background_2']['alt'];  ?> ">
                     </a>
-                    <h3 class="promo-card__heading">At Home</h3>
-                    <p class="promo-card__body">Everything you need for a new hair care regime.</p>
+                    <h3 class="promo-card__heading"><?php echo $promo['promo_heading_2']; ?></h3>
+                    <p class="promo-card__body"><?php echo $promo['promo_text_2']; ?></p>
                 </div>
             </section>
+            <!-- shop section -->
             <section class="shop-section">
                 <div class="shop-section__title">
                     <h3 class="shop-section__sub-heading">Editor's Pick</h3>
@@ -24,14 +28,14 @@
             </section>
             <section class="subscription-section">
                 <div class="full-width">
-                    <img src="/wp-content/themes/envy-copenhagen/assets/img/jessica-felicio-_cvwXhGqG-o-unsplash_1200x.jpg" alt="jessica felicio">
+                    <?php $image = get_field('subscription_background'); ?>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                 </div>
                 <div class="subscription-section__title">
-                    <h3 class="subscription-section__sub-heading">SUBSCRIPTIONS</h3>
-                    <h2 class="subscription-section__heading">NEVER RUN OUT</h2>
-                    <p class="subscription-section__body">Sign up to our award winning subscription service and get your
-                        first box free.</p>
-                    <a href="#" class="button button--dark">Learn More</a>
+                    <h3 class="subscription-section__sub-heading"><?php the_field('subscription_sub_heading'); ?></h3>
+                    <h2 class="subscription-section__heading"><?php the_field('subscription_heading');  ?></h2>
+                    <p class="subscription-section__body"><?php the_field('subscription_paragraph'); ?></p>
+                    <a href="<?php the_field('subscription_learn_more'); ?>" class="button button--dark">Learn More</a>
                 </div>
             </section>
             <section class="shop-section">
