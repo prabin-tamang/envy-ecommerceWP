@@ -793,6 +793,15 @@ a:focus {
   display: inline-block;
 }
 
+.header__icons .tools__icon a {
+  display: flex;
+  align-items: center;
+}
+
+.header__icons .tools__icon a svg {
+  margin: 0.8rem;
+}
+
 .header__icons .tools__icon:not(:last-child) {
   margin-right: 1rem;
 }

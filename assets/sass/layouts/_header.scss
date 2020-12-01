@@ -53,6 +53,15 @@
 			padding: 0;
 			&__icon {
 				display: inline-block;
+				a {
+					@include d-flex {
+						align-items: getAlign(c);
+					}
+
+					svg {
+						margin: 0.8rem;
+					}
+				}
 				&:not(:last-child) {
 					margin-right: 1rem;
 				}

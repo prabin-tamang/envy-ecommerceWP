@@ -77,7 +77,7 @@ if(class_exists('WooCommerce')){
     // add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
     // remove shop title
-    // add_filter( 'woocommerce_show_page_title', '__return_false; );
+    // add_filter( 'woocommerce_show_page_title', '__return_false');
 
 
     // Add theme supports
