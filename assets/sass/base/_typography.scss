@@ -1,0 +1,67 @@
+/*********************
+    FONT SIZES
+*********************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $headings-font !important;
+	text-transform: uppercase;
+}
+
+// Mobile heading sizes
+
+h1 {
+	font-size: 1.802rem;
+}
+
+h2 {
+	font-size: 3.8rem;
+	letter-spacing: 0.05rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+	letter-spacing: 0.2rem;
+}
+
+h4 {
+	font-size: 1.266rem;
+}
+
+h5 {
+	font-size: 1.125rem;
+}
+
+// Tablet font sizes
+
+@include tablet-portrait {
+	h1 {
+		font-size: 2.488rem;
+	}
+
+	h2 {
+		font-size: 3.804rem;
+	}
+
+	h3 {
+		font-size: 1.4rem;
+	}
+
+	h4 {
+		font-size: 1.44rem;
+	}
+
+	h5 {
+		font-size: 1.2rem;
+	}
+}
+
+@include laptop {
+	h2 {
+		font-size: 4.8rem;
+	}
+}

@@ -1,0 +1,91 @@
+/*********************
+    GLOBAL STYLES
+*********************/
+
+* {
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	font-size: 1.6rem;
+	font-family: $body-font;
+}
+
+p {
+	line-height: 1.45;
+	color: $dark-black;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+// container widths
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+
+	@include lg-phone {
+		width: 75%;
+	}
+
+	@include tablet-portrait {
+		width: 90%;
+	}
+
+	@include small-laptop {
+		width: 75%;
+	}
+
+	@include laptop {
+		max-width: 1200px;
+	}
+}
+
+// navigation sticky nav
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: $white;
+	z-index: 999;
+	transition: all 0.3s ease;
+}
+
+.sticky + .carousel {
+	padding-top: 70px;
+
+	@include tablet-portrait {
+		padding-top: 90px;
+	}
+
+	@include laptop {
+		padding-top: 140px;
+	}
+}
+
+// container width 100% (full-width)
+
+.full-width {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+// git push -u origin main

@@ -1,0 +1,126 @@
+/*********************
+    HEADER STYLES
+*********************/
+
+.header {
+	// top bar for notification and social media icons
+
+	&__notification-bar {
+		background: $black;
+		text-align: center;
+		position: relative;
+
+		> p {
+			color: $white;
+			text-transform: uppercase;
+			padding-bottom: 1rem;
+			letter-spacing: 0.15rem;
+		}
+	}
+
+	&__social {
+		padding: 1rem 0;
+		margin: 0;
+		.social-link {
+			display: inline;
+			> a {
+				padding: 0.5rem 0.8rem;
+				text-decoration: none;
+			}
+		}
+	}
+
+	// main navigation hamburger menu
+
+	&__menu {
+		grid-area: hamburger-menu;
+	}
+
+	&__logo {
+		grid-area: main-logo;
+		max-width: 150px;
+
+		@include lg-phone {
+			margin: 0 auto;
+		}
+	}
+
+	&__icons {
+		justify-self: end;
+		grid-area: menu-icons;
+
+		.tools {
+			padding: 0;
+			&__icon {
+				display: inline-block;
+				&:not(:last-child) {
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+
+	&__wrapper {
+		padding: 1.5rem 0;
+	}
+
+	&__navigation {
+		align-items: center;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			'hamburger-menu main-logo menu-icons'
+			'nav nav nav ';
+	}
+
+	// main navigation shown only on desktop
+
+	&__main-nav {
+		display: none;
+		grid-area: nav;
+		text-align: center;
+		.nav {
+			margin: 1.5rem 0;
+			.nav-link {
+				display: inline-block;
+				> a {
+					color: inherit;
+					text-decoration: none;
+					text-transform: uppercase;
+					padding: 0 1.5rem;
+				}
+			}
+		}
+
+		@include laptop {
+			display: block;
+		}
+	}
+
+	// slideshow content
+
+	.slideshow-container {
+		&__content {
+			text-align: center;
+		}
+	}
+
+	// media styles for header
+
+	@include tablet-portrait {
+		.slideshow-container {
+			&__content {
+				position: absolute;
+				top: 20%;
+				left: 10%;
+				background: $white;
+				max-width: 45ch;
+
+				@include laptop {
+					background: none;
+					text-align: left;
+				}
+			}
+		}
+	}
+}

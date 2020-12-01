@@ -1,0 +1,87 @@
+/*********************
+    SLIDER STYLES
+*********************/
+
+.carousel {
+	position: relative;
+}
+
+.slideshow-container {
+	width: 100%;
+	position: relative;
+	margin: auto;
+
+	&__content {
+		padding: 3rem;
+		h3 {
+			margin-bottom: 0.8rem;
+		}
+		> h2 {
+			margin-bottom: 1rem;
+		}
+
+		> p {
+			margin-bottom: 1.6rem;
+		}
+
+		> a {
+			margin: 0.5rem 0;
+			text-decoration: none;
+		}
+	}
+
+	@-webkit-keyframes fade {
+		from {
+			opacity: 0.4;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade {
+		from {
+			opacity: 0.4;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
+
+/* The dots/bullets/indicators */
+
+.indicators {
+	text-align: center;
+
+	&__dot {
+		height: 1.125rem;
+		width: 1.125rem;
+		margin: 0 0.2rem;
+		background-color: $black;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.active {
+		background-color: #717171;
+	}
+
+	.mySlides {
+		display: none;
+	}
+
+	> img {
+		vertical-align: middle;
+		position: absolute;
+	}
+
+	/* Fading animation */
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+}

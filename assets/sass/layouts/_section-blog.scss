@@ -1,0 +1,74 @@
+/*********************
+ BLOG SECTION STYLES
+*********************/
+
+.blog-section {
+	padding: 5rem 0;
+	&__sub-heading {
+		margin-bottom: 1rem;
+	}
+	&__title {
+		padding: 3rem;
+		margin-bottom: 5rem;
+		text-align: center;
+		> a {
+			margin-top: 2rem;
+			text-decoration: none;
+		}
+	}
+	&__body {
+		margin-top: 2rem;
+	}
+	&__heading {
+		font-size: 2.8rem;
+	}
+
+	.blog-content {
+		&__heading {
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+		}
+
+		&__article-img {
+			margin-top: 6rem;
+		}
+
+		> a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		&__excerpt {
+			margin-bottom: 1.5rem;
+		}
+
+		&__date {
+			display: block;
+			margin-bottom: 3rem;
+		}
+	}
+
+	// tablet styles blog section
+
+	@include tablet-portrait {
+		&__article {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(209px, 1fr));
+			grid-gap: 3rem;
+
+			@include laptop {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		&__title {
+			padding: 0;
+		}
+
+		.blog-content {
+			&__article-img {
+				margin-top: 0rem;
+			}
+		}
+	}
+}

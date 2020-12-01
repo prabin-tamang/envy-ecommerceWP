@@ -1,0 +1,19 @@
+/*********************
+    BUTTON STLYES
+*********************/
+
+.button {
+	padding: 12px 30px;
+	display: inline-block;
+}
+
+.button--dark {
+	background-color: $black;
+	color: $white;
+}
+
+// input
+
+.indiv--date {
+	color: $light-gray;
+}
