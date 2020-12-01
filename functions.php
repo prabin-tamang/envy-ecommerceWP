@@ -22,10 +22,35 @@ add_action('wp_enqueue_scripts', 'envy_custom_theme');
  *  Custom menus
  */
 
- function woocommerce_custom_menu() {
-     register_nav_menu('top-menu', __('Woocommerce Custom Menu', 'woocommercecustommenu'));
- }
-add_action('init', 'woocommerce_custom_menu');
+
+if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
+ 
+    function mytheme_register_nav_menu(){
+        register_nav_menus( array(
+            'header_menu' => __( 'Woocommerce Custom Menu', 'woocommercecustommenu' ),
+            'footer_menu'  => __( 'Woocommerce Footer Menu', 'woocommercefootermenu' ),
+        ) );
+    }
+    add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
+}
+
+
+
+// Adding class to header and footer navigation (li)
+
+add_filter( 'nav_menu_css_class', 'special_nav_class', 10, 3 );
+function special_nav_class( $classes, $item, $args ) {
+    if ( 'header_menu' === $args->theme_location ) {
+        $classes[] = 'nav-link';
+    }
+
+    if ( 'footer_menu' === $args->theme_location ) {
+        $classes[] = 'footer-link';
+    }
+
+    return $classes;
+}
+
 
 
 

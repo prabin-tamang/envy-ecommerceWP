@@ -87,15 +87,14 @@
 
                     <!-- desktop visible navigation -->
                     <div class="header__main-nav">
-                            <nav class="nav">
-                                <ul>
-                                    <li class="nav-link"><a href="#">Home</a></li>
-                                    <li class="nav-link"><a href="#">Shop</a></li>
-                                    <li class="nav-link"><a href="#">Blog</a></li>
-                                    <li class="nav-link"><a href="#">FAQS</a></li>
-                                    <li class="nav-link"><a href="#">Contact</a></li>
-                                </ul>
-                            </nav>
+                            <?php 
+                                wp_nav_menu(array(
+                                    'theme_location' => 'header_menu',
+                                    'container' => 'nav',
+                                    'container_class' => 'nav',
+                                )
+                            );
+                            ?>
                     </div>
                 </div>
             </div>

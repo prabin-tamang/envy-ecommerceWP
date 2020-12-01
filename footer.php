@@ -8,7 +8,7 @@
                 </section>
                 <section class="footer__navigation">
                     <h3 class="footer__heading">Links</h3>
-                    <ul class="footer-links">
+                    <!-- <ul class="footer-links">
                         <li class="footer-link"><a href="#">Home</a></li>
                         <li class="footer-link"><a href="#">Shop</a></li>
                         <li class="footer-link"><a href="#">About</a></li>
@@ -16,7 +16,20 @@
                         <li class="footer-link"><a href="#">FAQs</a></li>
                         <li class="footer-link"><a href="#">Contact</a></li>
                         <li class="footer-link"><a href="#">Theme Features</a></li>
-                    </ul>
+                    </ul> -->
+
+
+                    <!-- add class to ul and li -->
+
+                         <?php 
+                                wp_nav_menu(array(
+                                    'theme_location' => 'footer_menu',
+                                     'container' => false,
+                                     'menu_class' => 'footer-links'
+                                )
+                            );
+                            ?>
+
                 </section>
                 <section class="footer__mailing-list">
                     <h3 class="footer__heading">Join our mailing list</h3>
@@ -74,3 +87,4 @@
     <!-- <script src="./assets/js/lib/main.js"></script> -->
     <?php wp_footer(); ?>
 </body>
+</html>
