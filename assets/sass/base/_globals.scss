@@ -8,6 +8,7 @@
 
 html {
 	font-size: 62.5%;
+	height: 100%;
 }
 
 html,
@@ -29,6 +30,19 @@ p {
 img {
 	width: 100%;
 	display: block;
+}
+
+/* link styling */
+a:link,
+a:visited {
+	color: $black;
+	text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+	color: $light-gray;
+	transition: all 0.5s ease;
 }
 
 // container widths
@@ -86,6 +100,12 @@ img {
 	right: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
+}
+
+#breadcrumbs {
+	padding: 0 0 1rem;
+	font-size: 1.2rem;
+	margin: 0 0 2rem;
 }
 
 // git push -u origin main

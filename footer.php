@@ -8,19 +8,6 @@
                 </section>
                 <section class="footer__navigation">
                     <h3 class="footer__heading">Links</h3>
-                    <!-- <ul class="footer-links">
-                        <li class="footer-link"><a href="#">Home</a></li>
-                        <li class="footer-link"><a href="#">Shop</a></li>
-                        <li class="footer-link"><a href="#">About</a></li>
-                        <li class="footer-link"><a href="#">Blog</a></li>
-                        <li class="footer-link"><a href="#">FAQs</a></li>
-                        <li class="footer-link"><a href="#">Contact</a></li>
-                        <li class="footer-link"><a href="#">Theme Features</a></li>
-                    </ul> -->
-
-
-                    <!-- add class to ul and li -->
-
                          <?php 
                                 wp_nav_menu(array(
                                     'theme_location' => 'footer_menu',
@@ -29,7 +16,6 @@
                                 )
                             );
                             ?>
-
                 </section>
                 <section class="footer__mailing-list">
                     <h3 class="footer__heading">Join our mailing list</h3>
@@ -48,7 +34,7 @@
                     <h3 class="footer__heading">Get Connected</h3>
                     <ul class="header__social">
                         <li class="social-link">
-                            <a href="#">
+                            <a href="https://www.facebook.com/">
                                 <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"
                                     height="24px">
                                     <path
@@ -57,7 +43,7 @@
                             </a>
                         </li>
                         <li class="social-link">
-                            <a href=" #">
+                            <a href="https://www.instagram.com/">
                                 <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px"
                                     height="24px">
                                     <path
@@ -66,7 +52,7 @@
                             </a>
                         </li>
                         <li class="social-link">
-                            <a href=" #">
+                            <a href="https://www.snapchat.com/">
                                 <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"
                                     height="24px">
                                     <path
@@ -79,12 +65,11 @@
             </div>
             <!-- footer bottom section -->
             <div class="footer__bottom-section">
-                <p><a href="#">© 2020 Envy - Copenhagen</a></p>
+                <p><a href="#">© <?php echo date('Y'); ?> Envy - Copenhagen</a></p>
             </div>
         </div>
     </footer>
     <!-- FOOTER end -->
-    <!-- <script src="./assets/js/lib/main.js"></script> -->
     <?php wp_footer(); ?>
 </body>
 </html>

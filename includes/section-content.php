@@ -24,6 +24,7 @@
                 <div class="shop-section__title">
                     <h3 class="shop-section__sub-heading">Editor's Pick</h3>
                     <h2 class="shop-section__heading">Our new Favourites</h2>
+                <!-- SHOP CONTENT -->
                 </div>
             </section>
             <section class="subscription-section">
@@ -40,8 +41,16 @@
             </section>
             <section class="shop-section">
                 <div class="shop-section__title">
+                    <h3 class="shop-section__sub-heading">The essentials</h3>
+                    <h2 class="shop-section__heading">Seasonal must-haves</h2>
+                    <!-- SHOP CONTENT -->
+                </div>
+            </section>
+            <section class="shop-section">
+                <div class="shop-section__title">
                     <h3 class="shop-section__sub-heading">25% off when</h3>
                     <h2 class="shop-section__heading">Bundeled up</h2>
+                    <!-- SHOP CONTENT -->
                 </div>
             </section>
             <section class="blog-section">
@@ -50,6 +59,7 @@
                     <h2 class="blog-section__heading">From the blog</h2>
                 </div>
                 <div class="blog-section__article">
+                    <!-- BLOG CONTENT -->
                     <article class="blog-content">
                         <div class="blog-content__article-img">
                             <img src="/wp-content/themes/envy-copenhagen/assets/img/Blog_image_1_2x_1800x_79df387a-0188-4e66-8a9f-fe4f9c455041_1500x.png.jpg" alt="travel collection">

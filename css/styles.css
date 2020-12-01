@@ -349,7 +349,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 ***************************/
 @font-face {
   font-family: 'Harmonia Sans';
-  src: url("../../../assets/fonts/Harmonia-Sans-Bold.otf") format("opentype");
+  src: url("http://www.envy-copenhagen.com/wp-content/themes/envy-copenhagen/assets/fonts/Harmonia-Sans-bold.otf") format("opentype");
 }
 
 @font-face {
@@ -433,6 +433,7 @@ h5 {
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 html,
@@ -454,6 +455,20 @@ p {
 img {
   width: 100%;
   display: block;
+}
+
+/* link styling */
+a:link,
+a:visited {
+  color: #2d2d2d;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #9f9f9f;
+  transition: all 0.5s ease;
 }
 
 .container {
@@ -517,6 +532,12 @@ img {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+#breadcrumbs {
+  padding: 0 0 1rem;
+  font-size: 1.2rem;
+  margin: 0 0 2rem;
 }
 
 /*********************
@@ -791,6 +812,7 @@ img {
   display: none;
   grid-area: nav;
   text-align: center;
+  border-bottom: 1px solid #efefef;
 }
 
 .header__main-nav .nav {
@@ -816,6 +838,10 @@ img {
 
 .header .slideshow-container__content {
   text-align: center;
+}
+
+.header .slideshow-container__content > a {
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
@@ -913,6 +939,7 @@ img {
 .subscription-section__title > a {
   margin-top: 2rem;
   text-decoration: none;
+  color: #ffffff;
 }
 
 .subscription-section__body {

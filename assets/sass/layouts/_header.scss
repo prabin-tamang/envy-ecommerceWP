@@ -79,6 +79,7 @@
 		display: none;
 		grid-area: nav;
 		text-align: center;
+		border-bottom: 1px solid $lighter-gray;
 		.nav {
 			margin: 1.5rem 0;
 			.nav-link {
@@ -102,6 +103,9 @@
 	.slideshow-container {
 		&__content {
 			text-align: center;
+			> a {
+				color: $white;
+			}
 		}
 	}
 

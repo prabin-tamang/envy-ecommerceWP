@@ -40,17 +40,17 @@ if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
 
 add_filter( 'nav_menu_css_class', 'special_nav_class', 10, 3 );
 function special_nav_class( $classes, $item, $args ) {
+    // li class for header
     if ( 'header_menu' === $args->theme_location ) {
         $classes[] = 'nav-link';
     }
-
+    // li class for footer
     if ( 'footer_menu' === $args->theme_location ) {
         $classes[] = 'footer-link';
     }
 
     return $classes;
 }
-
 
 
 
@@ -86,7 +86,10 @@ if(class_exists('WooCommerce')){
     add_theme_support('wc-product-gallery-slider');
 }
 
-
+// removes add to basket from shop page
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
+// removes add to basket from single product page
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 
 
 

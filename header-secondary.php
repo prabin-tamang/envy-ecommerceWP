@@ -42,8 +42,8 @@
                 </li>
             </ul>
             <!-- HEADER notification text-->
-            <?php if( get_field('notification_text') ): ?>
-                <p><?php the_field('notification_text'); ?></p>
+            <?php if( get_field('notification_text', 9) ): ?>
+                <p><?php the_field('notification_text', 9); ?></p>
              <?php endif; ?>
         </div>
         <!-- HEADER navigation -->
@@ -99,36 +99,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- caraousel -->
-        <div class="carousel">   
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <?php $image = get_field('background_image'); ?>
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'];  ?> ">
-                <div class="slideshow-container__content">
-                    <h3><?php the_field('sub_heading'); ?></h3>
-                    <h2><?php the_field('heading'); ?></h2>
-                    <p><?php the_field('paragraph')?></p>
-                    <a href="<?php the_field('call_to_action'); ?>" class="button button--dark">Shop Now</a>
-                </div>
-            </div>
-            <div class="mySlides fade">
-              <?php $image = get_field('hero_carousel_2');  ?> 
-                 <img src="<?php echo $image['background_image_2']['url']; ?>" alt="<?php echo $image['background_image_2']['alt'];  ?> ">
-                <div class="slideshow-container__content">
-                    <h3><?php the_field('sub_heading_2')?></h3>
-                    <h2><?php the_field('heading_2')?></h2>
-                    <p><?php the_field('paragraph_2')?></p>
-                    <a href="<?php the_field('call_to_action_2'); ?>" class="button button--dark">Shop Now</a>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="indicators">
-            <span class="indicators__dot"></span>
-            <span class="indicators__dot"></span>
-        </div>
         </div>
     </header>
       <!-- HEADER end -->
