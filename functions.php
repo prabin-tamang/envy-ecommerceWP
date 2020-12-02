@@ -9,10 +9,12 @@ function envy_custom_theme() {
 
     // register stylesheet and js
     wp_register_style('custom_css', get_template_directory_uri(). '/css/styles.css', false, '1.0.0');
+    wp_register_style('wc_custom_css', get_template_directory_uri(). '/css/woocommerce-custom.css', false, '1.0.0');
     wp_register_script('main-js', get_template_directory_uri(). '/./assets/js/lib/main.js', array(), '1.0.0', true);
     
     // enqueue stylesheet and js
-    wp_enqueue_style('custom_css');
+    wp_enqueue_style('custom_css'); 
+    wp_enqueue_style('wc_custom_css');
     wp_enqueue_script('main-js');
 }
 add_action('wp_enqueue_scripts', 'envy_custom_theme');
@@ -60,6 +62,7 @@ function special_nav_class( $classes, $item, $args ) {
 
 // Wordpress
 add_theme_support( 'title-tag' );
+add_theme_support('post-thumbnails');
 
 
 
@@ -95,7 +98,11 @@ remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_ad
 
 
 
+// exceprt length
 
+add_filter( 'excerpt_length', function($length) {
+    return 30;
+} );
 
 
 

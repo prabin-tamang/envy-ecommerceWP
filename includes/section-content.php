@@ -3,7 +3,7 @@
             <!-- promo section -->
             <section class="promo-card">
                 <div class="promo-card__content">
-                    <a href="<?php the_field('promo_link'); ?>">
+                    <a href="<?php echo get_term_link(25); ?>">
                         <?php $image = get_field('promo_background'); ?>
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'];  ?> ">
                     </a>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="promo-card__content">
                     <?php $promo = get_field('promo_2'); ?>
-                    <a href="<?php echo $promo['promo_link_2']; ?>">
+                    <a href="<?php echo get_term_link(23); ?>">
                  <img src="<?php echo $promo['promo_background_2']['url']; ?>" alt="<?php echo $promo['promo_background_2']['alt'];  ?> ">
                     </a>
                     <h3 class="promo-card__heading"><?php echo $promo['promo_heading_2']; ?></h3>
@@ -26,7 +26,7 @@
                     <h2 class="shop-section__heading">Our new Favourites</h2>
                 </div>
                      <!-- SHOP PRODUCTS -->
-                     <?php echo do_shortcode('[products category="new favourite" columns="3"]'); ?>
+                     <?php echo do_shortcode('[products category="new favourite" columns="3" limit="3"]'); ?>
             </section>
             <section class="subscription-section">
                 <div class="full-width">
@@ -46,18 +46,16 @@
                     <h2 class="shop-section__heading">Seasonal must-haves</h2>
                 </div>
                     <!-- SHOP PRODUCTS -->
-                <?php echo do_shortcode('[products category="must have" columns="3"]'); ?>
+                <?php echo do_shortcode('[products category="must have" columns="3" limit="3"]'); ?>
             </section>
             <section class="shop-section">
                 <div class="shop-section__title">
                     <h3 class="shop-section__sub-heading">25% off when</h3>
                     <h2 class="shop-section__heading">Bundeled up</h2>
                 </div>
-                   <!-- SHOP CONTENT -->
-                   <div class="shop-items">
-                    <?php echo do_shortcode('[products category="bundle"]'); ?>
+                   <!-- SHOP PRODUCTS -->
+                    <?php echo do_shortcode('[products category="bundle" limit="3"]'); ?>
                     <!-- <p>Combine our 2 best selling products for an amazing 25% off. Simply add them to cart to claim your discount.</p> -->
-                   </div>
             </section>
             <section class="blog-section">
                 <div class="blog-section__title">

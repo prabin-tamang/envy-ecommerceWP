@@ -1,0 +1,29 @@
+/***********************************
+   WOOCOMMERCE CUSTOM STYLES
+************************************/
+
+/* single product page */
+
+.woocommerce-Reviews-title,
+.related h2 {
+	font-size: 2.8rem;
+	margin-bottom: 1rem;
+}
+
+/* my account page */
+
+.woocommerce-MyAccount-navigation ul {
+	padding: 0;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+	list-style: none;
+}
+
+.woocommerce-MyAccount-navigation ul li:not(:first-child) {
+	margin-top: 1em;
+}
+
+.woocommerce-MyAccount-navigation {
+	padding-bottom: 5rem;
+}

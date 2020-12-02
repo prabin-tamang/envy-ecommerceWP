@@ -63,10 +63,6 @@
 					@include d-flex {
 						align-items: getAlign(c);
 					}
-
-					svg {
-						margin: 0.8rem;
-					}
 				}
 				&:not(:last-child) {
 					margin-right: 1rem;
@@ -86,6 +82,7 @@
 		grid-template-areas:
 			'hamburger-menu main-logo menu-icons'
 			'nav nav nav ';
+		border-bottom: 1px solid $lighter-gray;
 	}
 
 	// main navigation shown only on desktop
@@ -94,7 +91,6 @@
 		display: none;
 		grid-area: nav;
 		text-align: center;
-		border-bottom: 1px solid $lighter-gray;
 		.nav {
 			margin: 1.5rem 0;
 			.nav-link {
@@ -120,6 +116,20 @@
 			text-align: center;
 			> a {
 				color: $white;
+			}
+		}
+	}
+
+	@include laptop {
+		&__icons {
+			.tools {
+				&__icon {
+					a {
+						svg {
+							margin: 0.8rem;
+						}
+					}
+				}
 			}
 		}
 	}

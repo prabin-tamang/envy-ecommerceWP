@@ -8,7 +8,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <!-- HEADER start -->
+    <!-- HEADER start --> 
     <header class="header">
         <!-- HEADER notification bar -->
         <div class="header__notification-bar">
