@@ -2,7 +2,7 @@
     
     <div class="blog-post__content">
            <?php if(has_post_thumbnail()) : ?>
-            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+           <a href="<?php the_permalink(); ?>"> <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></a>
         <?php endif; ?>
 
         <h3 class="blog-post__title"> <?php the_title(); ?></h3>
