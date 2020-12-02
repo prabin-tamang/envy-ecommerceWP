@@ -53,6 +53,12 @@
 			padding: 0;
 			&__icon {
 				display: inline-block;
+				span {
+					display: none;
+					@include laptop {
+						display: inline-block;
+					}
+				}
 				a {
 					@include d-flex {
 						align-items: getAlign(c);

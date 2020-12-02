@@ -24,8 +24,9 @@
                 <div class="shop-section__title">
                     <h3 class="shop-section__sub-heading">Editor's Pick</h3>
                     <h2 class="shop-section__heading">Our new Favourites</h2>
-                <!-- SHOP CONTENT -->
                 </div>
+                     <!-- SHOP PRODUCTS -->
+                     <?php echo do_shortcode('[products category="new favourite" columns="3"]'); ?>
             </section>
             <section class="subscription-section">
                 <div class="full-width">
@@ -43,15 +44,20 @@
                 <div class="shop-section__title">
                     <h3 class="shop-section__sub-heading">The essentials</h3>
                     <h2 class="shop-section__heading">Seasonal must-haves</h2>
-                    <!-- SHOP CONTENT -->
                 </div>
+                    <!-- SHOP PRODUCTS -->
+                <?php echo do_shortcode('[products category="must have" columns="3"]'); ?>
             </section>
             <section class="shop-section">
                 <div class="shop-section__title">
                     <h3 class="shop-section__sub-heading">25% off when</h3>
                     <h2 class="shop-section__heading">Bundeled up</h2>
-                    <!-- SHOP CONTENT -->
                 </div>
+                   <!-- SHOP CONTENT -->
+                   <div class="shop-items">
+                    <?php echo do_shortcode('[products category="bundle"]'); ?>
+                    <!-- <p>Combine our 2 best selling products for an amazing 25% off. Simply add them to cart to claim your discount.</p> -->
+                   </div>
             </section>
             <section class="blog-section">
                 <div class="blog-section__title">

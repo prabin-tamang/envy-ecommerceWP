@@ -27,6 +27,10 @@ p {
 	color: $dark-black;
 }
 
+p + p {
+	margin-top: 1.5em;
+}
+
 img {
 	width: 100%;
 	display: block;
@@ -106,6 +110,10 @@ a:focus {
 	padding: 0 0 1rem;
 	font-size: 1.2rem;
 	margin: 0 0 2rem;
+}
+
+#content {
+	padding: 2em 0;
 }
 
 // git push -u origin main

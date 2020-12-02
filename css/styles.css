@@ -452,6 +452,10 @@ p {
   color: #383838;
 }
 
+p + p {
+  margin-top: 1.5em;
+}
+
 img {
   width: 100%;
   display: block;
@@ -538,6 +542,10 @@ a:focus {
   padding: 0 0 1rem;
   font-size: 1.2rem;
   margin: 0 0 2rem;
+}
+
+#content {
+  padding: 2em 0;
 }
 
 /*********************
@@ -791,6 +799,16 @@ a:focus {
 
 .header__icons .tools__icon {
   display: inline-block;
+}
+
+.header__icons .tools__icon span {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__icons .tools__icon span {
+    display: inline-block;
+  }
 }
 
 .header__icons .tools__icon a {

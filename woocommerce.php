@@ -1,6 +1,6 @@
 <?php get_header('secondary'); ?>
 
-<main id="#content">
+<main>
     <div class="container">  
          <!--breadcrumbs  -->
         <?php
@@ -8,7 +8,7 @@
                 yoast_breadcrumb('
                 <p id="breadcrumbs">','</p>');
             }
-?>
+        ?>
 <!-- wocommerce shop -->
     <?php woocommerce_content(); ?>
      </div>
