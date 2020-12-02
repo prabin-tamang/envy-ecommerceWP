@@ -374,7 +374,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Harmonia Sans";
+  font-family: "Harmonia Sans", Tahoma, Verdana, Segoe, sans-serif;
   text-transform: uppercase;
 }
 
@@ -444,7 +444,7 @@ body {
 body {
   margin: 0;
   font-size: 1.6rem;
-  font-family: "AvenirNextLTW04-Light";
+  font-family: "AvenirNextLTW04-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 p {
