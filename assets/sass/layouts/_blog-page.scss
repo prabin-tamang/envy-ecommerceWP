@@ -5,6 +5,16 @@
 		text-align: center;
 	}
 
+	&__title {
+		margin-top: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	&__content {
+		> a {
+			text-decoration: underline;
+		}
+	}
 	@include tablet-portrait {
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 3rem;

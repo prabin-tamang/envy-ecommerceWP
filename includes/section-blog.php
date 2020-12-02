@@ -5,9 +5,9 @@
             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
         <?php endif; ?>
 
-        <h3> <?php the_title(); ?></h3>
-          <?php echo get_the_date(); ?>
-        <p><?php the_excerpt(); ?></p>
+        <h3 class="blog-post__title"> <?php the_title(); ?></h3>
+        <span class="blog-post__date indiv--date"><?php echo get_the_date(); ?> </span>
+        <p class="blog-post__body"><?php the_excerpt(); ?></p>
         <a href="<?php the_permalink(); ?>">Read More</a>
     </div>
     

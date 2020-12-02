@@ -63,6 +63,25 @@ function special_nav_class( $classes, $item, $args ) {
 // Wordpress
 add_theme_support( 'title-tag' );
 add_theme_support('post-thumbnails');
+add_theme_support('widgets');
+
+
+// Register sidebars
+
+function my_sidebars() {
+    register_sidebar(
+        array(
+            'name' => 'Blog Sidebar',
+            'id' => 'blog-sidebar',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'  
+        )
+    );
+}
+
+add_action('widgets_init', 'my_sidebars');
+
+
 
 
 

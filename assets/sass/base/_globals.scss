@@ -27,6 +27,12 @@ p {
 	color: $dark-black;
 }
 
+li,
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
 p + p {
 	margin-top: 1.5em;
 }
