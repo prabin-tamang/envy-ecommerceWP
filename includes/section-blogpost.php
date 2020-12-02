@@ -27,7 +27,9 @@
           $tags = get_the_tags(); 
           if($tags) :
           foreach ($tags as $tag): ?>
-          <strong>Tags: </strong> <a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+         <div class="tags">
+            <strong>Tags: </strong> <a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+         </div>
           <?php endforeach; endif; ?>
 
       <!-- blog categories -->
@@ -36,7 +38,10 @@
           $categories = get_the_category(); 
           if($categories) : 
           foreach ($categories as $cat): ?>
-           <strong>Categories: </strong><a href="<?php echo get_category_link($cat->term_id); ?>"> <?php echo $cat->name; ?></a>
+          <div class="categories">  
+              <strong>Categories: </strong><a href="<?php echo get_category_link($cat->term_id); ?>"> <?php echo $cat->name; ?></a>
+          </div>
+           
           <?php endforeach; endif; ?>
 
 
@@ -44,11 +49,11 @@
               <ul class="nav-posts">
             
                 <?php if (strlen(get_previous_post()->post_title) > 0) { ?>
-                   <li class="prev-link button button--dark"><?php previous_post_link( '%link', '« Previous Post' ); ?></li>
+                   <li class="prev-link button button--dark"><?php previous_post_link( '%link', 'Previous Post' ); ?></li>
                <?php } ?>
 
                <?php if (strlen(get_next_post()->post_title) > 0) { ?>
-                   <li class="next-link button button--dark"><?php next_post_link( '%link', '« Next Post' ); ?></li>
+                   <li class="next-link button button--dark"><?php next_post_link( '%link', 'Next Post' ); ?></li>
                <?php } ?>
             </ul>
        

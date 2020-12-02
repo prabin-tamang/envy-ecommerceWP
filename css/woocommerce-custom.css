@@ -10,6 +10,11 @@
 	margin-bottom: 1rem;
 }
 
+.categories a,
+.tags a {
+	text-decoration: underline;
+}
+
 /* my account page */
 
 .woocommerce-MyAccount-navigation ul {
@@ -26,4 +31,34 @@
 
 .woocommerce-MyAccount-navigation {
 	padding-bottom: 5rem;
+}
+
+/* blog single page */
+.categories,
+.tags {
+	padding: 1rem 0;
+}
+
+.textwidget {
+	margin-top: 2rem;
+}
+
+/* .widget_recent_entries {
+	padding: 4rem 0;
+} */
+
+.widget_recent_entries ul li:not(:first-child) {
+	margin-top: 1em;
+}
+
+.widget_recent_entries ul li span {
+	display: block;
+	margin-top: 1rem;
+	font-size: 1.2rem;
+	color: #9f9f9f;
+}
+
+.widget_recent_entries ul li {
+	border-bottom: 1px solid #efefef;
+	padding: 1rem 0;
 }
