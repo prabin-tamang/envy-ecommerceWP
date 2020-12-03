@@ -34,6 +34,10 @@
 
 	&__menu {
 		grid-area: hamburger-menu;
+		display: block;
+		@include laptop {
+			display: none;
+		}
 	}
 
 	&__logo {
@@ -42,6 +46,14 @@
 
 		@include lg-phone {
 			margin: 0 auto;
+		}
+	}
+
+	&__cr-switcher {
+		grid-area: currency;
+		display: none;
+		@include laptop {
+			display: block;
 		}
 	}
 
@@ -83,6 +95,11 @@
 			'hamburger-menu main-logo menu-icons'
 			'nav nav nav ';
 		border-bottom: 1px solid $lighter-gray;
+		@include laptop {
+			grid-template-areas:
+				'currency main-logo menu-icons'
+				'nav nav nav ';
+		}
 	}
 
 	// main navigation shown only on desktop

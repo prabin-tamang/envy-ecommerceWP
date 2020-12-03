@@ -782,6 +782,13 @@ main {
 
 .header__menu {
   grid-area: hamburger-menu;
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__menu {
+    display: none;
+  }
 }
 
 .header__logo {
@@ -792,6 +799,17 @@ main {
 @media screen and (min-width: 577px) {
   .header__logo {
     margin: 0 auto;
+  }
+}
+
+.header__cr-switcher {
+  grid-area: currency;
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__cr-switcher {
+    display: block;
   }
 }
 
@@ -837,6 +855,12 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 'hamburger-menu main-logo menu-icons' 'nav nav nav ';
   border-bottom: 1px solid #efefef;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__navigation {
+    grid-template-areas: 'currency main-logo menu-icons' 'nav nav nav ';
+  }
 }
 
 .header__main-nav {

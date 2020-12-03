@@ -62,3 +62,11 @@
 	border-bottom: 1px solid #efefef;
 	padding: 1rem 0;
 }
+
+/*  */
+
+.header__cr-switcher .dd-select,
+.header__cr-switcher .dd-options {
+	width: 50% !important;
+	background: none;
+}

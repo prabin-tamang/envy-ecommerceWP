@@ -24,7 +24,6 @@ add_action('wp_enqueue_scripts', 'envy_custom_theme');
  *  Custom menus
  */
 
-
 if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
  
     function mytheme_register_nav_menu(){
@@ -35,6 +34,7 @@ if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
     }
     add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
 }
+ 
 
 
 
@@ -66,9 +66,13 @@ add_theme_support('post-thumbnails');
 add_theme_support('widgets');
 
 
-// Register sidebars
+/**
+ * Widgets
+ */
 
-function my_sidebars() {
+// side bar for blog
+
+function blog_sidebar() {
     register_sidebar(
         array(
             'name' => 'Blog Sidebar',
@@ -79,10 +83,22 @@ function my_sidebars() {
     );
 }
 
-add_action('widgets_init', 'my_sidebars');
+add_action('widgets_init', 'blog_sidebar');
 
+// side bar for header
 
+function header_widget() {
+    register_sidebar(
+        array(
+            'name' => 'Header',
+            'id' => 'header-widget',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'  
+        )
+    );
+}
 
+add_action('widgets_init', 'header_widget');
 
 
 // Woocommerce

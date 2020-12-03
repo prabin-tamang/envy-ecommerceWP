@@ -56,6 +56,12 @@
                             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
                         </svg>
                     </div>
+                     <div class="header__cr-switcher">
+                    <!-- currency switcher -->
+                    <?php if( is_active_sidebar('header-widget')) : ?>
+                        <?php dynamic_sidebar('header-widget'); ?>
+                    <?php endif; ?>
+                    </div>
                     <div class="header__logo">
                        <a href="/"><img src="/wp-content/themes/envy-copenhagen/assets/img/logo.png" alt="logo"></a>
                     </div>
