@@ -4,6 +4,7 @@
 
 .header {
 	// top bar for notification and social media icons
+	position: relative;
 
 	&__notification-bar {
 		background: $black;
@@ -167,6 +168,48 @@
 					text-align: left;
 				}
 			}
+		}
+	}
+
+	// search
+
+	#search__popup {
+		padding: 1.5rem 1rem;
+		background: $white;
+		border: 0;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		box-sizing: border-box;
+
+		@include laptop {
+			right: 0;
+			left: 65%;
+			width: 35%;
+			bottom: auto;
+		}
+
+		form {
+			@include d-flex {
+				justify-content: getJustify(sb);
+				align-items: getAlign(c);
+			}
+			> button {
+				background: none;
+				border: none;
+				cursor: pointer;
+			}
+
+			input {
+				border: 1px solid $lighter-gray;
+				padding: 1rem;
+			}
+		}
+
+		input:nth-child(2) {
+			width: 100%;
 		}
 	}
 }

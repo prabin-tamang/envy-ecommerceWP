@@ -65,7 +65,7 @@
             </div>
             <!-- footer bottom section -->
             <div class="footer__bottom-section">
-                <p><a href="#">© <?php echo date('Y'); ?> Envy - Copenhagen</a></p>
+                <p><a href="http://www.envy-copenhagen.com/">© <?php echo date('Y'); ?> Envy - Copenhagen</a></p>
             </div>
         </div>
     </footer>

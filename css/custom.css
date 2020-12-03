@@ -1,6 +1,18 @@
 /***********************************
    WOOCOMMERCE CUSTOM STYLES
 ************************************/
+/* font and color variables */
+
+:root {
+	--black: #2d2d2d;
+	--white: #ffffff;
+	--dark-black: #383838;
+	--light-gray: #9f9f9f;
+	--lighter-gray: #efefef;
+
+	--headings-font: 'Harmonia Sans', Tahoma, Verdana, Segoe, sans-serif;
+	--body-font: 'AvenirNextLTW04-Light', 'Helvetica Neue', Helvetica, Arial;
+}
 
 /* single product page */
 
@@ -57,11 +69,11 @@
 	display: block;
 	margin-top: 1rem;
 	font-size: 1.2rem;
-	color: #9f9f9f;
+	color: var(--light-gray);
 }
 
 .widget_recent_entries ul li {
-	border-bottom: 1px solid #efefef;
+	border-bottom: 1px solid var(--lighter-gray);
 	padding: 1rem 0;
 }
 
@@ -78,7 +90,7 @@
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-	background: #2d2d2d !important;
+	background: var(--black) !important;
 	width: 100%;
 	padding: 1.5rem 3rem;
 	margin-top: 2rem;
@@ -87,7 +99,7 @@
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-	background: #2d2d2d !important;
+	background: var(--black) !important;
 }
 
 /* product style homepage */
@@ -100,7 +112,7 @@
 .woocommerce ul.products li.product .woocommerce-loop-category__title,
 .woocommerce ul.products li.product .woocommerce-loop-product__title,
 .woocommerce ul.products li.product h3 {
-	font-family: 'AvenirNextLTW04-Light', 'Helvetica Neue', Helvetica, Arial;
+	font-family: var(--body-font);
 	font-weight: normal;
 	text-transform: none;
 	padding: 1em 0 0.5em 0;

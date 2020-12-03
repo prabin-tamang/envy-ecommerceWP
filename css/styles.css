@@ -753,6 +753,10 @@ main {
 /*********************
     HEADER STYLES
 *********************/
+.header {
+  position: relative;
+}
+
 .header__notification-bar {
   background: #2d2d2d;
   text-align: center;
@@ -919,6 +923,48 @@ main {
     background: none;
     text-align: left;
   }
+}
+
+.header #search__popup {
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+  .header #search__popup {
+    right: 0;
+    left: 65%;
+    width: 35%;
+    bottom: auto;
+  }
+}
+
+.header #search__popup form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header #search__popup form > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header #search__popup form input {
+  border: 1px solid #efefef;
+  padding: 1rem;
+}
+
+.header #search__popup input:nth-child(2) {
+  width: 100%;
 }
 
 /*********************
@@ -1176,4 +1222,14 @@ main {
 
 .nav-posts li a {
   color: #ffffff;
+}
+
+#search-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 3rem;
+}
+
+#search-content > h1 {
+  grid-column: 1/-1;
 }
