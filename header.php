@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('push-down'); ?>>
     <!-- HEADER start --> 
     <header class="header">
         <!-- HEADER notification bar -->
@@ -48,13 +48,15 @@
         </div>
         <!-- HEADER navigation -->
         <div class="header__wrapper">
-            <div class="container">
+          
                 <div class="header__navigation">
                     <div class="header__menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                       <button class="hamburger-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
                         </svg>
+                       </button>
                     </div>
                     <div class="header__cr-switcher">
                     <!-- currency switcher -->
@@ -99,23 +101,23 @@
                               </button> 
                                 <input type="text" name="s" placeholder="Search..." id="search" value="<?php the_search_query(); ?>">
                             </form>
-                          
                         </div>
                     </div>
 
                     <!-- desktop visible navigation -->
                     <div class="header__main-nav">
-                            <?php 
+                            <?php
                                 wp_nav_menu(array(
                                     'theme_location' => 'header_menu',
                                     'container' => 'nav',
-                                    'container_class' => 'nav',
+                                    'container_class' => 'nav',  
                                 )
                             );
                             ?>
+                              
                     </div>
                 </div>
-            </div>
+          
         </div>
         <!-- caraousel -->
         <div class="carousel">   

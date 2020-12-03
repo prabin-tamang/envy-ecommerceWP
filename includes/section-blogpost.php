@@ -9,7 +9,7 @@
         <?php endif; ?>
 
         <h1 class="page-title"><?php the_title(); ?></h1>
-        <?php echo get_the_date(); ?>
+       <span class="indiv--date"> <?php echo get_the_date(); ?></span>
 
         <?php
         $fname = get_the_author_meta('first_name'); 
@@ -17,7 +17,7 @@
         ?>
 
         <!-- posted by and content -->
-        <p>Posted by :  <?php echo $fname; ?> <?php echo $lname; ?></p>
+        <p class="indiv--date">Posted by :  <?php echo $fname; ?> <?php echo $lname; ?></p>
         <?php the_content(); ?>
 
 

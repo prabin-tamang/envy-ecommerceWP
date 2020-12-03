@@ -56,7 +56,10 @@ a:focus {
 }
 
 main {
-	min-height: 100vh;
+	min-height: 90vh;
+	@include laptop {
+		min-height: 100vh;
+	}
 }
 
 // container widths

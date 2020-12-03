@@ -77,6 +77,14 @@
 	padding: 1rem 0;
 }
 
+.textwidget {
+	margin-bottom: 3rem;
+}
+
+.widget-title {
+	margin-bottom: 3rem !important;
+}
+
 /* header widget currency */
 
 .header__cr-switcher .dd-select,
@@ -131,7 +139,7 @@
 
 /* single page product */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 	.woocommerce #content div.product div.images,
 	.woocommerce div.product div.images,
 	.woocommerce-page #content div.product div.images,
@@ -145,4 +153,24 @@
 	.woocommerce-page div.product div.summary {
 		width: 38%;
 	}
+}
+
+.woocommerce .products ul,
+.woocommerce ul.products {
+	padding: 0 0 0rem;
+}
+
+.woocommerce ul.products[class*='columns-'] li.product {
+	margin-bottom: 3rem;
+}
+
+.woocommerce #reviews #comments ol.commentlist {
+	padding: 0;
+}
+
+.close-icon {
+	background: url(http://www.envy-copenhagen.com/wp-content/themes/envy-copenhagen/assets/img/close-white-18dp.svg);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+	display: block;
 }
