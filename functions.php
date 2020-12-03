@@ -9,7 +9,7 @@ function envy_custom_theme() {
 
     // register stylesheet and js
     wp_register_style('main_css', get_template_directory_uri(). '/css/styles.css', false, '1.0.0');
-    wp_register_style('custom_css', get_template_directory_uri(). '/css/woocommerce-custom.css', false, '1.0.0');
+    wp_register_style('custom_css', get_template_directory_uri(). '/css/custom.css', false, '1.0.0');
     wp_register_script('main-js', get_template_directory_uri(). '/./assets/js/lib/main.js', array(), '1.0.0', true);
     
     // enqueue stylesheet and js
