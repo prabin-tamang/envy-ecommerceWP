@@ -142,10 +142,16 @@
 		&__icons {
 			.tools {
 				&__icon {
-					a {
-						svg {
-							margin: 0.8rem;
-						}
+					> button {
+						background: none;
+						border: 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+					}
+					svg {
+						margin: 0.8rem;
 					}
 				}
 			}
@@ -172,7 +178,6 @@
 	}
 
 	// search
-
 	#search__popup {
 		padding: 1.5rem 1rem;
 		background: $white;
@@ -183,12 +188,18 @@
 		left: 0;
 		right: 0;
 		box-sizing: border-box;
+		transform: translateY(-100vh);
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		z-index: 999999;
+		height: auto;
 
 		@include laptop {
 			right: 0;
-			left: 65%;
-			width: 35%;
 			bottom: auto;
+			width: 35%;
+			left: 65%;
+			display: block;
 		}
 
 		form {

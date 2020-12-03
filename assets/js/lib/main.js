@@ -1,14 +1,15 @@
 
 
+
 // header carousel
 
-var slideIndex = 0;
+let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("indicators__dot");
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("indicators__dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
@@ -26,8 +27,8 @@ function showSlides() {
 
 window.onscroll = function() {myFunction()};
 
-var navbar = document.querySelector(".header__wrapper");
-var sticky = navbar.offsetTop;
+let navbar = document.querySelector(".header__wrapper");
+let sticky = navbar.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset >= sticky) {
@@ -36,3 +37,13 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
+// open search
+
+let searchBtnSubmit = document.querySelector('.btn-searchSubmit');
+let search = document.getElementById('search__popup');
+
+searchBtnSubmit.addEventListener('click', () => {
+    search.style.transform = "translateY(0%)";
+});

@@ -8,7 +8,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <!-- HEADER start -->
+    <!-- HEADER start --> 
     <header class="header">
         <!-- HEADER notification bar -->
         <div class="header__notification-bar">
@@ -42,7 +42,7 @@
                 </li>
             </ul>
             <!-- HEADER notification text-->
-            <?php if( get_field('notification_text', 9) ): ?>
+          <?php if( get_field('notification_text', 9) ): ?>
                 <p><?php the_field('notification_text', 9); ?></p>
              <?php endif; ?>
         </div>
@@ -56,7 +56,7 @@
                             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
                         </svg>
                     </div>
-                     <div class="header__cr-switcher">
+                    <div class="header__cr-switcher">
                     <!-- currency switcher -->
                     <?php if( is_active_sidebar('header-widget')) : ?>
                         <?php dynamic_sidebar('header-widget'); ?>
@@ -68,13 +68,14 @@
                     <div class="header__icons">
                         <ul class="tools">
                             <li class="tools__icon">
-                                <a href="#">                                  
-                                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="24px" height="24px"><path d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z"/></svg>
+                                <button class="btn-searchSubmit">                              
+                                     <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="24px" height="24px"><path d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z"/></svg>
                                     <span>Search</span>
-                                </a>
+                                </button>
                             </li>
-                            <li class="tools__icon">
+                             <li class="tools__icon">
                                 <a href="<?php echo wc_get_cart_url(); ?>">
+
                                    <svg height="24" viewBox="0 -31 512.00026 512" width="24"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -84,18 +85,21 @@
                                         <path
                                             d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0" />
                                     </svg>
-                                      <span title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total(); ?></span>
+
+                                    <span title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total(); ?></span>
+
                                 </a>
                             </li>
                         </ul>
-                           <div id="search__popup">
+
+                        <div id="search__popup">
                             <form action="/" method="get">
                               <button type="submit">
                                         <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="24px" height="24px"><path d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z"/></svg>
                               </button> 
                                 <input type="text" name="s" placeholder="Search..." id="search" value="<?php the_search_query(); ?>">
-                                <button>Close</button>
                             </form>
+                          
                         </div>
                     </div>
 
@@ -112,6 +116,36 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- caraousel -->
+        <div class="carousel remove-secondary">   
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <?php $image = get_field('background_image'); ?>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'];  ?> ">
+                <div class="slideshow-container__content">
+                    <h3><?php the_field('sub_heading'); ?></h3>
+                    <h2><?php the_field('heading'); ?></h2>
+                    <p><?php the_field('paragraph')?></p>
+                    <a href="<?php the_field('call_to_action'); ?>" class="button button--dark">Shop Now</a>
+                </div>
+            </div>
+            <div class="mySlides fade">
+              <?php $image = get_field('hero_carousel_2');  ?> 
+                 <img src="<?php echo $image['background_image_2']['url']; ?>" alt="<?php echo $image['background_image_2']['alt'];  ?> ">
+                <div class="slideshow-container__content">
+                    <h3><?php the_field('sub_heading_2')?></h3>
+                    <h2><?php the_field('heading_2')?></h2>
+                    <p><?php the_field('paragraph_2')?></p>
+                    <a href="<?php the_field('call_to_action_2'); ?>" class="button button--dark">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="indicators">
+            <span class="indicators__dot"></span>
+            <span class="indicators__dot"></span>
+        </div>
         </div>
     </header>
       <!-- HEADER end -->
