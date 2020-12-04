@@ -568,6 +568,14 @@ main {
   margin: 0 0 2rem;
 }
 
+.error-page {
+  text-align: center;
+}
+
+.error-page p > a {
+  text-decoration: underline;
+}
+
 /*********************
     BUTTON STLYES
 *********************/
