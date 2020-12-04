@@ -89,8 +89,8 @@
 
 .header__cr-switcher .dd-select,
 .header__cr-switcher .dd-options {
-	width: 50% !important;
-	background: none;
+	width: 30% !important;
+	background: none !important;
 }
 
 /* button styles  */
@@ -171,6 +171,13 @@
 .close-icon {
 	background: url(http://www.envy-copenhagen.com/wp-content/themes/envy-copenhagen/assets/img/close-white-18dp.svg);
 	background-repeat: no-repeat;
-	background-position: 95% 50%;
-	display: block;
+	background-position: center;
+	display: inline-block;
+	border: 2px outset var(--lighter-gray);
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+
+	right: 0;
+	padding: 0.8rem 1rem;
 }

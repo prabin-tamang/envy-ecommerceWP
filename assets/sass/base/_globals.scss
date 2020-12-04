@@ -58,6 +58,9 @@ a:focus {
 main {
 	min-height: 90vh;
 	@include laptop {
+		min-height: 60vh;
+	}
+	@include desktop {
 		min-height: 100vh;
 	}
 }
