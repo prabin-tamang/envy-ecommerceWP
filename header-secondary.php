@@ -116,7 +116,7 @@
                             );
                             ?>
                     </div>
-              
+                <div class="overlay"></div>
             </div>
         </div>
         <!-- caraousel -->

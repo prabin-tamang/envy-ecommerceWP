@@ -168,6 +168,10 @@
 	padding: 0;
 }
 
+.woocommerce a.button.alt {
+	box-sizing: border-box;
+}
+
 .close-icon {
 	background: url(http://www.envy-copenhagen.com/wp-content/themes/envy-copenhagen/assets/img/close-white-18dp.svg);
 	background-repeat: no-repeat;

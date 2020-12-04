@@ -117,7 +117,7 @@
                               
                     </div>
                 </div>
-          
+                <div class="overlay"></div>
         </div>
         <!-- caraousel -->
         <div class="carousel">   

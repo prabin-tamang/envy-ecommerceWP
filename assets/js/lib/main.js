@@ -38,8 +38,8 @@ function myFunction() {
 
 // open search header
 
-let searchBtnSubmit = document.querySelector('.btn-searchSubmit');
-let search = document.getElementById('search__popup');
+const searchBtnSubmit = document.querySelector('.btn-searchSubmit');
+const search = document.getElementById('search__popup');
 
 searchBtnSubmit.addEventListener('click', () => {
     search.style.transform = "translateY(0%)";
@@ -50,17 +50,21 @@ searchBtnSubmit.addEventListener('click', () => {
 const hamburgerMenu = document.querySelector('.hamburger-btn');
 const navMenu = document.querySelector('.nav');
 
-const close = document.getElementById('menu-item-206');
-const bodyPush = document.querySelector('.push-down');
+const close = document.getElementById('menu-item-208');
+const overlay = document.querySelector('.overlay');
 
 
 hamburgerMenu.addEventListener('click', () => {
     navMenu.style.transform = "translateX(0%)";
-    // bodyPush.style.marginLeft = "100%";
+    overlay.style.display = "block";
 })
 
 close.addEventListener('click',()=> {
      navMenu.style.transform = "translateX(-100%)";
-    // bodyPush.style.marginLeft = "0px";
-     
+       overlay.style.display = "none"; 
+})
+
+overlay.addEventListener('click', () => {
+       navMenu.style.transform = "translateX(-100%)";
+       overlay.style.display = "none";
 })
