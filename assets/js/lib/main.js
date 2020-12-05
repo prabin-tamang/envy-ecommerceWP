@@ -50,7 +50,7 @@ searchBtnSubmit.addEventListener('click', () => {
 const hamburgerMenu = document.querySelector('.hamburger-btn');
 const navMenu = document.querySelector('.nav');
 
-const close = document.getElementById('menu-item-208');
+const close = document.getElementById('menu-item-214');
 const overlay = document.querySelector('.overlay');
 
 

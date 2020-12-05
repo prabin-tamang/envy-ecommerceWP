@@ -141,6 +141,15 @@ add_filter( 'excerpt_length', function($length) {
 
 
 
+/*
+ * Modify Success message for email confirmation. Tags: confirm your email address, activation link, email confirmation
+ */
+ 
+add_filter( 'wppb_register_success_message', 'wppbc_reg_success_msg_email_confirmation', 10, 2 );
+function wppbc_reg_success_msg_email_confirmation( $content, $account_name ){
+   return "Thank you for your registration. Your account has to be activated before you can login. Please check your email.";
+}
+
 
 
 ?>
